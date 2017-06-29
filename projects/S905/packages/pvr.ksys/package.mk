@@ -16,24 +16,28 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="oem"
-PKG_VERSION=""
+PKG_NAME="pvr.ksys"
+PKG_VERSION="nico"
 PKG_REV="1"
 PKG_ARCH="any"
-PKG_LICENSE="various"
-PKG_SITE="http://www.openelec.tv"
-PKG_URL=""
-PKG_DEPENDS_TARGET="toolchain rng-tools u-boot-tools pvr.ksys"
-PKG_PRIORITY="optional"
-PKG_SECTION="virtual"
-PKG_SHORTDESC="OEM: Metapackage for various OEM packages"
-PKG_LONGDESC="OEM: Metapackage for various OEM packages"
-
-PKG_IS_ADDON="no"
+PKG_LICENSE="GPL"
+PKG_SITE="https://www.ktv.zone/"
+#PKG_URL="https://github.com/Ksys-ch/pvr.ksys/archive/master.tar.gz"
+PKG_URL="https://github.com/ndamiens/pvr.ksys/archive/nico.tar.gz"
+PKG_DEPENDS_TARGET="${PKG_DEPENDS_TARGET} toolchain kodi-platform zlib curl"
+PKG_SECTION=""
+PKG_SHORTDESC="pvr.ksys"
+PKG_LONGDESC="pvr.ksys"
 PKG_AUTORECONF="no"
 
-post_install() {
-  if [ -n "$DEVICE" -a -d "$PROJECT_DIR/$PROJECT/devices/$DEVICE/filesystem" ]; then
-    cp -LR $PROJECT_DIR/$PROJECT/devices/$DEVICE/filesystem/* $ROOT/$BUILD/image/system
-  fi
+PKG_IS_ADDON="yes"
+PKG_ADDON_TYPE="xbmc.pvrclient"
+
+addon() {
+  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/
+  cp -R $PKG_BUILD/.install_pkg/usr/share/$MEDIACENTER/addons/$PKG_NAME/* $ADDON_BUILD/$PKG_ADDON_ID/
+
+  ADDONSO=$(xmlstarlet sel -t -v "/addon/extension/@library_linux" $ADDON_BUILD/$PKG_ADDON_ID/addon.xml)
+  cp -L $PKG_BUILD/.install_pkg/usr/lib/$MEDIACENTER/addons/$PKG_NAME/$ADDONSO $ADDON_BUILD/$PKG_ADDON_ID/
 }
+
