@@ -5,4 +5,7 @@
   <general>
     <settinglevel>2</settinglevel>
   </general>
+  <pvrplayback>
+    <startlast>2</startlast>
+  </pvrplayback>
 </settings>
