@@ -17,12 +17,12 @@
 ################################################################################
 
 PKG_NAME="pvr.ksys"
-PKG_VERSION="nico"
+PKG_VERSION="master"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://www.ktv.zone/"
-PKG_URL="https://github.com/Ksys-ch/pvr.ksys/archive/master.tar.gz"
+PKG_URL="https://github.com/Ksys-ch/pvr.ksys/archive/$PKG_VERSION.tar.gz"
 #PKG_URL="https://github.com/ndamiens/pvr.ksys/archive/nico.tar.gz"
 PKG_DEPENDS_TARGET="${PKG_DEPENDS_TARGET} toolchain kodi-platform zlib curl"
 PKG_SECTION=""
