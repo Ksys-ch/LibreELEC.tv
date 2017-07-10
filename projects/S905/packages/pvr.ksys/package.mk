@@ -22,8 +22,8 @@ PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://www.ktv.zone/"
-#PKG_URL="https://github.com/Ksys-ch/pvr.ksys/archive/master.tar.gz"
-PKG_URL="https://github.com/ndamiens/pvr.ksys/archive/nico.tar.gz"
+PKG_URL="https://github.com/Ksys-ch/pvr.ksys/archive/master.tar.gz"
+#PKG_URL="https://github.com/ndamiens/pvr.ksys/archive/nico.tar.gz"
 PKG_DEPENDS_TARGET="${PKG_DEPENDS_TARGET} toolchain kodi-platform zlib curl"
 PKG_SECTION=""
 PKG_SHORTDESC="pvr.ksys"
@@ -40,4 +40,3 @@ addon() {
   ADDONSO=$(xmlstarlet sel -t -v "/addon/extension/@library_linux" $ADDON_BUILD/$PKG_ADDON_ID/addon.xml)
   cp -L $PKG_BUILD/.install_pkg/usr/lib/$MEDIACENTER/addons/$PKG_NAME/$ADDONSO $ADDON_BUILD/$PKG_ADDON_ID/
 }
-
