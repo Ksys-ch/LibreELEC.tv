@@ -17,11 +17,11 @@
 ################################################################################
 
 PKG_NAME="LibreELEC-settings"
-PKG_VERSION="6336f1e"
+PKG_VERSION="libreelec-8.0"
 PKG_ARCH="any"
 PKG_LICENSE="prop."
 PKG_SITE="https://libreelec.tv"
-PKG_URL="https://github.com/LibreELEC/service.libreelec.settings/archive/$PKG_VERSION.tar.gz"
+PKG_URL="https://github.com/Ksys-ch/service.libreelec.settings/archive/$PKG_VERSION.tar.gz"
 PKG_SOURCE_DIR="service.libreelec.settings-$PKG_VERSION*"
 PKG_DEPENDS_TARGET="toolchain Python connman pygobject dbus-python"
 PKG_SECTION=""
