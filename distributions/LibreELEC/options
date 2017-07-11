@@ -178,6 +178,9 @@
 # build and install nano text editor (yes / no)
   NANO_EDITOR="yes"
 
+# build and install miniupnpc (yes / no)
+  MINIUPNPC="yes"
+
 # cron support (yes / no)
   CRON_SUPPORT="yes"
 

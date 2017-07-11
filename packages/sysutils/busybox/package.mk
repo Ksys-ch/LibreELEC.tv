@@ -49,6 +49,11 @@ PKG_MAKE_OPTS_INIT="ARCH=$TARGET_ARCH \
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET nano"
   fi
 
+# miniupnpc
+if [ "$MINIUPNPC" = "yes" ]; then
+  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET miniupnpc"
+fi
+
 # nfs support
 if [ "$NFS_SUPPORT" = yes ]; then
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET rpcbind"
