@@ -29,3 +29,8 @@ PKG_LONGDESC="UPnP IGD client lightweight library client"
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
+
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/sbin
+		cp -a `find . -name upnpc-static` $INSTALL/usr/sbin/upnpc
+}
