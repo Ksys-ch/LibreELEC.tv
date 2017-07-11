@@ -17,7 +17,7 @@
 ################################################################################
 
 PKG_NAME="miniupnpc"
-PKG_VERSION="0.0"
+PKG_VERSION="2.0.20170509"
 PKG_ARCH="any"
 PKG_LICENSE="nofree"
 PKG_SITE="http://miniupnp.free.fr/"
