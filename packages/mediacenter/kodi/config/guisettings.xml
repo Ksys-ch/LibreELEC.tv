@@ -2,6 +2,11 @@
   <debug>
     <screenshotpath pathversion="1">/storage/screenshots/</screenshotpath>
   </debug>
+  <locale>
+    <country>France</country>
+    <keyboardlayouts>French AZERTY</keyboardlayouts>
+    <language>resource.language.fr_fr</language>
+  </locale>
   <general>
     <settinglevel>2</settinglevel>
   </general>
