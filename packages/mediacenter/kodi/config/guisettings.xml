@@ -13,4 +13,7 @@
   <pvrplayback>
     <startlast>2</startlast>
   </pvrplayback>
+  <videoplayer>
+    <adjustrefreshrate>0</adjustrefreshrate>
+  </videoplayer>
 </settings>
