@@ -38,4 +38,3 @@ PKG_ADDON_TYPE="xbmc.python.module"                # see LE/config/addon/ for ot
 PKG_ADDON_REPOVERSION="8.0"                        # for what main version it should be compatible
 # PKG_ADDON_REQUIRES="some.addon:0.0.0"            # http://kodi.wiki/view/addon.xml#.3Crequires.3E
 # PKG_MAINTAINER="John Doe (email)"                # if you want to be know as maintainer for a addon
-```
