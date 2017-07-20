@@ -1,7 +1,3 @@
-#add-on package.mk skeleton
-This file shows a skeleton example of an add-on package.mk with content notes. Except for the license header, any lines prefixed with `#` are optional and may be omitted if not required.
-
-```shell
 ################################################################################
 #      This file is part of LibreELEC - https://LibreELEC.tv
 #      Copyright (C) 2016 Team LibreELEC
@@ -21,13 +17,13 @@ This file shows a skeleton example of an add-on package.mk with content notes. E
 ################################################################################
 
 PKG_NAME="plugin.video.replayksys"                               # same as the folder name
-PKG_VERSION="1.0.0"                                # version or 7 digit-hash
+PKG_VERSION="master"                                # version or 7 digit-hash
 PKG_REV="100"                                      # currently we start at 100 to solve OE update problems
 PKG_ARCH="any"                                     # for available architectures, see LE/config/arch.* files
 # PKG_ADDON_PROJECTS="RPi RPi2"                    # for available projects, see projects subdirectory
 PKG_LICENSE="GPL"                                  # program licenses, see licenses subdirectory for a list
 PKG_SITE="http://ktv.zone/"
-PKG_URL="http://www.site.org/$PKG_VERSION.tar.xz"  # for github see the other packages, prefer tar.xz over .gz
+PKG_URL="https://github.com/Ksys-ch/plugin.video.replayksys/archive/$PKG_VERSION.tar.xz"  # for github see the other packages, prefer tar.xz over .gz
 # PKG_SOURCE_DIR="somename-${PKG_VERSION}*"        # if the folder inside the zip is different to the pkg name
 PKG_DEPENDS_TARGET="toolchain Python"              # dependencies that are needed that the addon builds
 PKG_SECTION="video"                                # service, tools, virtual, driver, driver.remote ...
