@@ -24,14 +24,14 @@ PKG_ARCH="any"                                     # for available architectures
 PKG_LICENSE="GPL"                                  # program licenses, see licenses subdirectory for a list
 PKG_SITE="http://ktv.zone/"
 PKG_URL="https://github.com/Ksys-ch/plugin.video.replayksys/archive/$PKG_VERSION.tar.gz"  # for github see the other packages, prefer tar.xz over .gz
-# PKG_SOURCE_DIR="somename-${PKG_VERSION}*"        # if the folder inside the zip is different to the pkg name
+PKG_SOURCE_DIR="${PKG_NAME}-${PKG_VERSION}*"        # if the folder inside the zip is different to the pkg name
 PKG_DEPENDS_TARGET="toolchain Python"              # dependencies that are needed that the addon builds
 PKG_SECTION="video"                                # service, tools, virtual, driver, driver.remote ...
 PKG_SHORTDESC="Replay K-Sys: lire et parcourir le replay de KTV"       # Addon: is a program that does this and that
 PKG_LONGDESC="Replay K-Sys: lire et parcourir le replay de KTV des 7 derniers jours"
 PKG_AUTORECONF="no"                                # yes or no
 
-PKG_IS_ADDON="yes"
+PKG_IS_ADDON="no"
 PKG_ADDON_NAME="plugin.video.replayksys"           # proper name of the addon that is shown at the repo
 PKG_ADDON_TYPE="xbmc.python.module"                # see LE/config/addon/ for other possibilities
 # PKG_ADDON_PROVIDES="executable"                  # http://kodi.wiki/view/addon.xml#.3Cprovides.3E_element
