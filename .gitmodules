@@ -1,0 +1,3 @@
+[submodule "packages/mediacenter/kodi/config/plugin.video.replayksys"]
+	path = packages/mediacenter/kodi/config/plugin.video.replayksys
+	url = git@github.com:Ksys-ch/plugin.video.replayksys.git
