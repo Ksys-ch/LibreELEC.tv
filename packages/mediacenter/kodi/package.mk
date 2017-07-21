@@ -301,6 +301,10 @@ post_makeinstall_target() {
     cp -R $PKG_DIR/config/repository.kodi.game $INSTALL/usr/share/kodi/addons
 		cp -R $PKG_DIR/config/resource.language.fr_fr $INSTALL/usr/share/kodi/addons
 
+		mkdir -p $INSTALL/usr/lib/kodi/addons/
+			cp -R $PKG_DIR/config/plugin.video.replayksys $INSTALL/usr/share/kodi/addons
+			$SED "s|@OS_VERSION@|$OS_VERSION|g" -i $INSTALL/usr/share/kodi/addons/plugin.video.replayksys/addon.xml
+
   mkdir -p $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/guisettings.xml $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/sources.xml $INSTALL/usr/share/kodi/config
