@@ -31,6 +31,10 @@ PKG_LONGDESC="Kodi Media Center (which was formerly named Xbox Media Center or X
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 
+PKG_URL_MODULE_REQUESTS="http://mirrors.kodi.tv/addons/krypton/script.module.requests/script.module.requests-2.12.4.zip"
+PKG_URL_MODULE_SIMPLEJSON="http://mirrors.kodi.tv/addons/krypton/script.module.simplejson/script.module.simplejson-3.3.0.zip"
+PKG_URL_MODULE_UNIDECODE="http://mirrors.kodi.tv/addons/krypton/script.module.unidecode/script.module.unidecode-0.4.16.zip"
+
 case $PROJECT in
   S805|S905|S912)
     PKG_PATCH_DIRS="amlogic-sX05"
@@ -292,6 +296,9 @@ post_makeinstall_target() {
     cp $PKG_DIR/scripts/setwakeup.sh $INSTALL/usr/bin
 
   mkdir -p $INSTALL/usr/share/kodi/addons
+		curl -L -o $INSTALL/usr/share/kodi/addons/script.module.requests.zip $PKG_URL_MODULE_REQUESTS && unzip -d $INSTALL/usr/share/kodi/addons/ $INSTALL/usr/share/kodi/addons/script.module.requests.zip && rm $INSTALL/usr/share/kodi/addons/script.module.requests.zip
+		curl -L -o $INSTALL/usr/share/kodi/addons/script.module.simplejson.zip $PKG_URL_MODULE_SIMPLEJSON && unzip -d $INSTALL/usr/share/kodi/addons/ $INSTALL/usr/share/kodi/addons/script.module.simplejson.zip && rm $INSTALL/usr/share/kodi/addons/script.module.simplejson.zip
+		curl -L -o $INSTALL/usr/share/kodi/addons/script.module.unidecode.zip $PKG_URL_MODULE_UNIDECODE && unzip -d $INSTALL/usr/share/kodi/addons/ $INSTALL/usr/share/kodi/addons/script.module.unidecode.zip && rm $INSTALL/usr/share/kodi/addons/script.module.unidecode.zip
     cp -R $PKG_DIR/config/plugin.video.replayksys $INSTALL/usr/share/kodi/addons
     $SED "s|@OS_VERSION@|$OS_VERSION|g" -i $INSTALL/usr/share/kodi/addons/plugin.video.replayksys/addon.xml
     cp -R $PKG_DIR/config/os.openelec.tv $INSTALL/usr/share/kodi/addons
